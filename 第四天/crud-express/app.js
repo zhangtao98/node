@@ -26,9 +26,11 @@ app.use(bodyParser.json())
 
 //配置模板引擎
 app.engine('html',require('express-art-template'));
+
 //配置bodyParser 一定要zai app.use(router)挂载路由之前
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+
 //把路由容器挂载到app服务中
 app.use(router);
 
